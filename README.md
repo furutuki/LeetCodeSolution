@@ -1,5 +1,3 @@
-# LeetCodeSolution
-
 
 
 ### 0003.  Longest Substring Without Repeating Characters ###
@@ -11,3 +9,7 @@
 
     
 - 如果不是重复字符，添加到set中。
+
+### 0007. Reverse Integer ###
+
+int转成字符串再反转，再判断下正负以及是否在signed int32范围内就可以
