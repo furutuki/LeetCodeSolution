@@ -14,7 +14,7 @@
 
 连个有序整数list归并排序成一个新list，再计算中位数
 
-### 000. Longest Palindromic Substring ###
+### 0005. Longest Palindromic Substring ###
 利用动态规划，假设matrix[i][j]表示子字符串substring(i, j)是否是回文，遍历一遍就可以。
 
 ### 0007. Reverse Integer ###
