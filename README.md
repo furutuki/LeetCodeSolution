@@ -11,15 +11,16 @@
 - 如果不是重复字符，添加到set中。
 
 ### 0004. Median of Two Sorted Arrays ###
-
 连个有序整数list归并排序成一个新list，再计算中位数
 
 ### 0005. Longest Palindromic Substring ###
 利用动态规划，假设matrix[i][j]表示子字符串substring(i, j)是否是回文，遍历一遍就可以。
 
 ### 0007. Reverse Integer ###
-
 int转成字符串再反转，再判断下正负以及是否在signed int32范围内就可以
+
+### 0008. String to Integer (atoi) ###
+直接遍历一遍即可
 
 ### 0012. Integer to Roman ###
 利用list从大到小存储roman integer和字母的对应关系，不断取数字的商和余数即可
