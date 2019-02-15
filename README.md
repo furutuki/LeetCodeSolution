@@ -20,3 +20,6 @@
 ### 0007. Reverse Integer ###
 
 int转成字符串再反转，再判断下正负以及是否在signed int32范围内就可以
+
+### 0014. Longest Common Prefix ###
+遍历一遍字符串数组，不断更新最长前缀即可。也可以使用trie树来计算。   
