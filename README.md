@@ -21,6 +21,9 @@
 
 int转成字符串再反转，再判断下正负以及是否在signed int32范围内就可以
 
+### 0012. Integer to Roman ###
+利用list从大到小存储roman integer和字母的对应关系，不断取数字的商和余数即可
+
 ### 0013. Roman to Integer ###
 直接利用字典数据结构就可以
 
