@@ -30,3 +30,7 @@ int转成字符串再反转，再判断下正负以及是否在signed int32范�
 
 ### 0014. Longest Common Prefix ###
 遍历一遍字符串数组，不断更新最长前缀即可。也可以使用trie树来计算。   
+
+
+### 0022. Generate Parentheses ###
+为了保证和题目描述的顺序一致，使用dfs遍历即可。如果不要求顺序DP，BFS都可以。
