@@ -4,8 +4,8 @@ from typing import List
 class Solution:
 
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        low = 0;
-        high = len(nums) - 1;
+        low = 0
+        high = len(nums) - 1
         while low < len(nums) and high >= 0 and low <= high:
             mid = int((low + high) / 2)
             if nums[mid] == target:
