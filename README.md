@@ -45,3 +45,8 @@ int转成字符串再反转，再判断下正负以及是否在signed int32范�
 - 如果右半有序  
 （1）目标在右半，那么继续递归搜索右半  
 - 返回不存在  
+
+
+### 00334. Find First and Last Position of Element in Sorted Array ###
+解法：二分法
+一旦找到target，分别向前、向后搜索等于target的数，得到坐标范围。（如果数组元素都是一样，要找的target也是这个数，那么算法复杂度退化到了O(n))
