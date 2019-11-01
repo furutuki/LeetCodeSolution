@@ -60,3 +60,6 @@ int转成字符串再反转，再判断下正负以及是否在signed int32范�
 ### 0035. Search Insert Position ###
 解法一：暴力搜索（遍历）  
 解法二：二分查找法
+
+### 0036. Valid Sudoku ###
+解法：暴力
