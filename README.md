@@ -97,3 +97,6 @@ print(t)
 ### 0040. Combination Sum II ###
 解法：回溯。  
 和problem 0039的区别时每个元素只能用一次，只要在递归时下标参数+1跳过当前item即可
+
+### 0041. First Missing Positive ###
+解法：排序再遍历
