@@ -19,7 +19,7 @@ class Solution:
                 curval.append(s[j])
                 j = k
 
-        return ''.join(t)
+        return ''.join(curval)
 
 
 s = Solution()
