@@ -89,3 +89,11 @@ print(t)
 
 ### 0037. Sudoku Solver ###
 解法：回溯
+
+### 0039. Combination Sum ###
+解法：回溯  
+先排序，然后做dfs搜索即可  
+
+### 0040. Combination Sum II ###
+解法：回溯。  
+和problem 0039的区别时每个元素只能用一次，只要在递归时下标参数+1跳过当前item即可
