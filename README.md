@@ -112,3 +112,8 @@ print(t)
 ### 0046. Permutations ###
 求全排列  
 解法：DFS
+
+[0048. Rotate Image](https://leetcode.com/problems/rotate-image/)  
+顺时针旋转矩阵90度  
+解法：以对角线为分界线，遍历矩阵对角线一边的每个元素，顺时针放到下一个位置即可。  
+[代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)
