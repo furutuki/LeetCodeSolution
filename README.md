@@ -35,6 +35,30 @@ int转成字符串再反转，再判断下正负以及是否在signed int32范�
 ### 0022. Generate Parentheses ###
 为了保证和题目描述的顺序一致，使用dfs遍历即可。如果不要求顺序DP，BFS都可以。
 
+[0023. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  
+K路归并数组  
+解法：利用优先队列直接存放所有的数组元素  
+大坑：使用python3在本地运行ok，提交代码一直报错"TypeError '<' not supported between instances of 'ListNode' and 'ListNode'"     
+原因是网站提供的ListNode的定义没有__lt__方法
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+```
+而我在本地运行时ListNode的定义里给加了__lt__()的实现，然后网站测试代码里定义却没有这个方法。
+为了规避这个问题，使用一个wrapper类包住提供的ListNode对象即可：
+```
+class Wrapper:
+    def __init__(self, node):
+        self.node = node
+    def __lt__(self, other):
+        return self.node.val < other.node.val
+```
+[代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0023.%20Merge%20K%20Sorted%20Lists)
+
+
 ### 0033. Search in Rotated Sorted Array ###
 二分法。  
 先看中间点是不是符合条件，是直接返回中间点索引，否则逻辑如下：  
