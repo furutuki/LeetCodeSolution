@@ -140,4 +140,9 @@ print(t)
 [0048. Rotate Image](https://leetcode.com/problems/rotate-image/)  
 顺时针旋转矩阵90度  
 解法：以对角线为分界线，遍历矩阵对角线一边的每个元素，顺时针放到下一个位置即可。  
-[代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)
+[代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)  
+
+[0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/)  
+将一组单词按照含有相同字母的方式分类
+解法：对每个单词排序，再对单词列表排序，遍历。  
+[代码](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution.py)
