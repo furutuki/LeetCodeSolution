@@ -143,9 +143,10 @@ print(t)
 [代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)  
 
 [0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/)  
-将一组单词按照含有相同字母的方式分类
+将一组单词按照含有相同字母的方式分类  
+
 解法一：对每个单词排序，再对单词列表排序，遍历。  
 [代码](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution.py)
 
-解法二：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。
+解法二：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。  
 [代码](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution2.py)
