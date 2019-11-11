@@ -85,68 +85,96 @@ class Wrapper:
 解法一：暴力搜索（遍历）  
 解法二：二分查找法
 
-### 0036. Valid Sudoku ###
+###[0036. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  ###
 解法一：暴力，按行、列，九宫格分别遍历一遍  
 解法二：优化后的暴力（针对每个元素只遍历一次，在循环中针对三种情况进行判断）  
 
 ========== 一个python的坑 ============  
 写法一：  
+```
 t = [{}] * 4  
 t[2]["hello"] = "s"  
 print(t)  
-
+```
  输出结果：  
+```
  [{'hello': 's'}, {'hello': 's'}, {'hello': 's'}, {'hello': 's'}] 
-  
+```
  和预期的不一样
   
-写法二：  
+写法二：
+```
+  
  t = [{},{},{},{}]  
  t[2]["hello"] = "s"  
  print(t)  
- 
- 输出结果：  
+ ```
+
+ 输出结果：
+ ```
 [{}, {}, {'hello': 's'}, {}]  
+```
 
 
-===================================== 
+[0037. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0037.%20Sudoku%20Solver/Solution.py)：  
+回溯
 
-### 0037. Sudoku Solver ###
-解法：回溯
-
-### 0039. Combination Sum ###
-解法：回溯  
+[0039. Combination Sum](https://leetcode.com/problems/combination-sum/)  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0039.%20Combination%20Sum/Solution.py)：  
+回溯。 
 先排序，然后做dfs搜索即可  
 
-### 0040. Combination Sum II ###
-解法：回溯。  
+[0040. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0040.%20Combination%20Sum%20II/Solution.py)：  
+回溯。    
 和problem 0039的区别时每个元素只能用一次，只要在递归时下标参数+1跳过当前item即可
 
-### 0041. First Missing Positive ###
-解法：排序再遍历
+[0041. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)  
+给定一个无序数组，找出最小的缺失的数  
 
-### 0042. Trapping Rain Water ###
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0041.%20First%20Missing%20Positive/Solution.py)：  
+排序再遍历
+
+[0042. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  
 计算一堆长方体围成的水域的面积  
-解法一：不断地找围起来的能够存放水的子区间，然后累加水域面积。针对子区间左右边界的确定，如下计算：
+
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0042.%20Trapping%20Rain%20Water/Solution.py)：  
+不断地找围起来的能够存放水的子区间，然后累加水域面积。针对子区间左右边界的确定，如下计算：
 - 左边界：找递增的长方体直到下一个相邻变矮，此最高长方体为左边界  
 - 有边界：从左边界后边第二个开始遍历，如果当前高度大于等于左边界高度，那么这个就是要找的右边界限。否则看看它是否是当前遍历过的长方体中最高的一个，如果是记录其下标。这样最终得到的最高的那根长方体的下标就是右边界。
 
-解法二：双指针法。从左右往中间遍历，在比较挨矮的那边一致记录最高的高度，然后累加当前高度和最高高度之间的差即可
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0042.%20Trapping%20Rain%20Water/Solution2.py)：  
+双指针法。从左右往中间遍历，在比较挨矮的那边一致记录最高的高度，然后累加当前高度和最高高度之间的差即可
 
-### 0046. Permutations ###
+[0046. Permutations](https://leetcode.com/problems/permutations/)  
 求全排列  
-解法：DFS
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0046.%20Permutations/Solution.py): DFS
 
 [0048. Rotate Image](https://leetcode.com/problems/rotate-image/)  
 顺时针旋转矩阵90度  
-解法：以对角线为分界线，遍历矩阵对角线一边的每个元素，顺时针放到下一个位置即可。  
-[代码](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)  
+[解法](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)  ：以对角线为分界线，遍历矩阵对角线一边的每个元素，顺时针放到下一个位置即可。  
 
 [0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/)  
 将一组单词按照含有相同字母的方式分类  
 
-解法一：对每个单词排序，再对单词列表排序，遍历。  
-[代码](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution.py)
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution.py)：对每个单词排序，再对单词列表排序，遍历。  
 
-解法二：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。  
-[代码](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution2.py)
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution2.py)：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。  
+
+[0078. Subsets](https://leetcode.com/problems/subsets/)  
+给定一个list，求其中元素的全组合  
+
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0078.%20Subsets/Solution.py)：DFS  
+当前结果集中每个list，都添加当前遍历的item做为新的list，添加到结果集。另外当前遍历的item单独成为一个list添加到结果集。最后把空集合[]添加到结果集  
+
+[0136. Single Number](https://leetcode.com/problems/single-number/)  
+数组中元素除了一个元素，其他都是出现两次，找出那个只出现一次的元素  
+
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution.py)：对数组排序，遍历一遍即可  
+
+
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution2.py)：因为只有1个元素出现1次，其他都是2次，充分利用这个特点，对愿数组去重求和*2，再减去愿数组各元素累加之和即可。  
+
+ 
+[解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution3.py)：所有元素做异或操作即可。 
