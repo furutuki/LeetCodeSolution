@@ -162,6 +162,19 @@ print(t)
 
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution2.py)：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。  
 
+### [0053. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) ###
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0053.%20Maximum%20Subarray/Solution.py): DP  
+假设dp[i]代表[0, i]范围内以i结尾的子区间的最大的和。初始状态：  
+```
+dp[0] = nums[0]
+```
+子问题分解：   
+- 如果 nums[i] > 0，那么dp[i] = dp[i - 1] + nums[i]；   
+- 否则 dp[i] = nums[i]。也即：  
+```
+dp[i] = max(dp[i - 1] + nums[i], nums[i])
+```
+
 
 ### [0055. Jump Game](https://leetcode.com/problems/jump-game/)  ###
 一个整形数组nums，长度为len，初始位于index=0的位置，可以移动[1, numS[index]]步，问nums[len - 1是否可达。
