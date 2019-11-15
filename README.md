@@ -205,6 +205,11 @@ paths[i][j] = paths[i][j+1] + paths[i+1][j]  (0 <= i < row, 0 <= j < col)
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0062.%20Unique%20Paths/Solution_DFS.py)： DFS  
 虽然也是一个方法，但是会超时（TLE）  
 
+### [0064. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) ###
+给定row * col的矩阵，计算从(0,0)到(row, col)的最短路径  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0064.%20Minimum%20Path%20Sum/Solution.py)：DP  
+这题是[0062. Unique Paths](https://leetcode.com/problems/unique-paths/)的变形，这里需要在遍历的过程中不断地更新最短路径即可。
+
 ### [0078. Subsets](https://leetcode.com/problems/subsets/)  ###
 给定一个list，求其中元素的全组合  
 
