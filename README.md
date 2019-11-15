@@ -187,6 +187,23 @@ dp[i] = max(dp[i - 1] + nums[i], nums[i])
 
 [解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0055.%20Jump%20Game/Solution3.py)：DP。dp[i]代表从index=0处是否可达index=i处
 
+### [0056. Merge Intervals](https://leetcode.com/problems/merge-intervals/) ###
+合并整数区间
+
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0056.%20Merge%20Intervals/Solution.py): 先排序再遍历即可。
+
+### [0062. Unique Paths](https://leetcode.com/problems/unique-paths/) ###
+针对一个row * col的矩阵，初始位于左上角的格子，每次只能向右或者向下移动一格，问一共有多少种不同的路径能够到达右下角的格子  
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0062.%20Unique%20Paths/Solution_DP.py)： 动态规划  
+假设paths[i][j]表示从i行j列的格子到右下角格子的路径总数，那么根据只能向右或者向下移动的特点，先初始化最后一行所有元素和最后一列所有元素为1.
+那么问题分解如下：
+```
+paths[i][j] = paths[i][j+1] + paths[i+1][j]  (0 <= i < row, 0 <= j < col)
+```
+从row-1行，col-1列往前遍历一遍，paths[0][0]即为结果。
+
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0062.%20Unique%20Paths/Solution_DFS.py)： DFS  
+虽然也是一个方法，但是会超时（TLE）  
 
 ### [0078. Subsets](https://leetcode.com/problems/subsets/)  ###
 给定一个list，求其中元素的全组合  
