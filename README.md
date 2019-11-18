@@ -85,7 +85,7 @@ class Wrapper:
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0035.%20Search%20Insert%20Position/Solution.py)：暴力搜索（遍历）  
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0035.%20Search%20Insert%20Position/Solution2.py)：二分查找法
 
-###[0036. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  ###
+### [0036. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  ###
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0036.%20Valid%20Sudoku/Solution.py)：暴力，按行、列，九宫格分别遍历一遍  
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0036.%20Valid%20Sudoku/Solution2.py)：优化后的暴力（针对每个元素只遍历一次，在循环中针对三种情况进行判断）  
 
@@ -218,7 +218,7 @@ paths[i][j] = paths[i][j+1] + paths[i+1][j]  (0 <= i < row, 0 <= j < col)
 dp[i] = dp[i + 1] + dp[i + 2]
 ```
 初始值dp[n] = 1, dp[n - 1] = 2，所以有
-```buildoutcfg
+```
 for i in range(n - 2, 0, -1):
     dp[i] = dp[i + 1] + dp[i + 2]
 ```
