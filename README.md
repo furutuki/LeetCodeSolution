@@ -1,6 +1,5 @@
 
-
-### [0003.  Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) ###
+#### [0003.  Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) #####
 
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0003.%20Longest%20Substring%20Without%20Repeating%20Characters/Solution.py):  
 记录子串的开始位置start\_index，往后遍历子串尾部tail\_index，用set记录子串字符。
@@ -11,38 +10,38 @@
     
 - 如果不是重复字符，添加到set中。
 
-### [0004. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays) ###
+#### [0004. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0004.%20Median%20of%20Two%20Sorted%20Arrays/Solution.py): 连个有序整数list归并排序成一个新list，再计算中位数
 
-### [0005. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) ###
+#### [0005. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0005.%20Longest%20Palindromic%20Substring/Solution.py): 利用动态规划，假设matrix[i][j]表示子字符串substring(i, j)是否是回文，遍历一遍就可以。
 
-### [0007. Reverse Integer](https://leetcode.com/problems/reverse-integer) ###
+#### [0007. Reverse Integer](https://leetcode.com/problems/reverse-integer) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0007.%20Reverse%20Integer/Solution.py): int转成字符串再反转，再判断下正负以及是否在signed int32范围内就可以
 
-### [0008. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi) ###
+#### [0008. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0008.%20String%20to%20Integer%20(atoi)/Solution.py): 直接遍历一遍即可
 
-### [0012. Integer to Roman](https://leetcode.com/problems/integer-to-roman) ###
+#### [0012. Integer to Roman](https://leetcode.com/problems/integer-to-roman) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0012.%20Integer%20to%20Roman/Solution.py): 利用list从大到小存储roman integer和字母的对应关系，不断取数字的商和余数即可
 
-### [0013. Roman to Integer](https://leetcode.com/problems/roman-to-integer) ###
+#### [0013. Roman to Integer](https://leetcode.com/problems/roman-to-integer) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0013.%20Roman%20to%20Integer/Solution.py): 直接利用字典数据结构就可以
 
-### [0014. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) ###
+#### [0014. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0014.%20Longest%20Common%20Prefix/Solution.py): 遍历一遍字符串数组，不断更新最长前缀即可。也可以使用trie树来计算。   
 
 
-### [0022. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) ###
+#### [0022. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/tree/master/0022.%20Generate%20Parentheses):  
 为了保证和题目描述的顺序一致，使用dfs遍历即可。如果不要求顺序DP，BFS都可以。
 
-### [0023. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ###  
+#### [0023. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) ####  
 K路归并数组  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0023.%20Merge%20K%20Sorted%20Lists/Solution.py)：利用优先队列直接存放所有的数组元素  
 大坑：使用python3在本地运行ok，提交代码一直报错"TypeError '<' not supported between instances of 'ListNode' and 'ListNode'"     
 原因是网站提供的ListNode的定义没有__lt__方法
-```
+```python
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
@@ -51,7 +50,7 @@ K路归并数组
 ```
 而我在本地运行时ListNode的定义里给加了__lt__()的实现，然后网站测试代码里定义却没有这个方法。
 为了规避这个问题，使用一个wrapper类包住提供的ListNode对象即可：
-```
+```python
 class Wrapper:
     def __init__(self, node):
         self.node = node
@@ -59,7 +58,7 @@ class Wrapper:
         return self.node.val < other.node.val
 ```
 
-### [0033. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) ###
+#### [0033. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0033.%20Search%20in%20Rotated%20Sorted%20Array/Solution.py)：二分法。  
 先看中间点是不是符合条件，是直接返回中间点索引，否则逻辑如下：  
 - 如果左半有序  
@@ -71,7 +70,7 @@ class Wrapper:
 - 返回不存在  
 
 
-### [0034. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) ###
+#### [0034. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) ####
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0034.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array/Solution.py)：二分查找法（循环实现）    
 一旦找到target，分别向前、向后搜索等于target的数，得到坐标范围。（如果数组元素都是一样，要找的target也是这个数，那么算法复杂度退化到了O(n))  
 
@@ -81,17 +80,17 @@ class Wrapper:
 如果l、r中不含-1，说明target正好跨越了中点mid，那么取l的左侧坐标和r的右侧坐标，得到的区间就是结果
 
 
-### [0035. Search Insert Position](https://leetcode.com/problems/search-insert-position/) ###
+#### [0035. Search Insert Position](https://leetcode.com/problems/search-insert-position/) ####
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0035.%20Search%20Insert%20Position/Solution.py)：暴力搜索（遍历）  
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0035.%20Search%20Insert%20Position/Solution2.py)：二分查找法
 
-### [0036. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  ###
+#### [0036. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  ####
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0036.%20Valid%20Sudoku/Solution.py)：暴力，按行、列，九宫格分别遍历一遍  
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0036.%20Valid%20Sudoku/Solution2.py)：优化后的暴力（针对每个元素只遍历一次，在循环中针对三种情况进行判断）  
 
 ========== 一个python的坑 ============  
 写法一：  
-```
+```python
 t = [{}] * 4  
 t[2]["hello"] = "s"  
 print(t)  
@@ -103,12 +102,11 @@ print(t)
  和预期的不一样
   
 写法二：
+```python
+t = [{},{},{},{}]  
+t[2]["hello"] = "s"  
+print(t)  
 ```
-  
- t = [{},{},{},{}]  
- t[2]["hello"] = "s"  
- print(t)  
- ```
 
  输出结果：
  ```
@@ -116,27 +114,27 @@ print(t)
 ```
 
 
-### [0037. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)  ###
+#### [0037. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)  ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0037.%20Sudoku%20Solver/Solution.py)：  
 回溯
 
-### [0039. Combination Sum](https://leetcode.com/problems/combination-sum/)  ###
+#### [0039. Combination Sum](https://leetcode.com/problems/combination-sum/)  ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0039.%20Combination%20Sum/Solution.py)：  
 回溯。 
 先排序，然后做dfs搜索即可  
 
-### [0040. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)  ###
+#### [0040. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)  ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0040.%20Combination%20Sum%20II/Solution.py)：  
 回溯。    
 和problem 0039的区别时每个元素只能用一次，只要在递归时下标参数+1跳过当前item即可
 
-### [0041. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)  ###
+#### [0041. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)  ####
 给定一个无序数组，找出最小的缺失的数  
 
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0041.%20First%20Missing%20Positive/Solution.py)：  
 排序再遍历
 
-### [0042. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  ###
+#### [0042. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  ####
 计算一堆长方体围成的水域的面积  
 
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0042.%20Trapping%20Rain%20Water/Solution.py)：  
@@ -147,36 +145,36 @@ print(t)
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0042.%20Trapping%20Rain%20Water/Solution2.py)：  
 双指针法。从左右往中间遍历，在比较挨矮的那边一致记录最高的高度，然后累加当前高度和最高高度之间的差即可
 
-### [0046. Permutations](https://leetcode.com/problems/permutations/)  ###
+#### [0046. Permutations](https://leetcode.com/problems/permutations/)  ####
 求全排列  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0046.%20Permutations/Solution.py): DFS
 
-### [0048. Rotate Image](https://leetcode.com/problems/rotate-image/)  ###
+#### [0048. Rotate Image](https://leetcode.com/problems/rotate-image/)  ####
 顺时针旋转矩阵90度  
 [解法](https://github.com/furutuki/LeetCodeSolution/tree/master/0048.%20Rotate%20Image)  ：以对角线为分界线，遍历矩阵对角线一边的每个元素，顺时针放到下一个位置即可。  
 
-### [0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/) ### 
+#### [0049. Group Anagrams](https://leetcode.com/problems/group-anagrams/) #### 
 将一组单词按照含有相同字母的方式分类  
 
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution.py)：对每个单词排序，再对单词列表排序，遍历。  
 
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0049.%20Group%20Anagrams/Solution2.py)：遍历列表每个单词，对每个单词的字母排序，以排序后的单词为key，将排序前的单词座位value添加到字典中。遍历完成后输出字典的values即可。  
 
-### [0053. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) ###
+#### [0053. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) ####
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0053.%20Maximum%20Subarray/Solution.py): DP  
 假设dp[i]代表[0, i]范围内以i结尾的子区间的最大的和。初始状态：  
 ```
 dp[0] = nums[0]
 ```
 子问题分解：   
-- 如果 nums[i] > 0，那么dp[i] = dp[i - 1] + nums[i]；   
-- 否则 dp[i] = nums[i]。也即：  
+- 如果 ```nums[i] > 0```，那么```dp[i] = dp[i - 1] + nums[i]```；   
+- 否则 ```dp[i] = nums[i]```。也即：  
 ```
 dp[i] = max(dp[i - 1] + nums[i], nums[i])
 ```
 
 
-### [0055. Jump Game](https://leetcode.com/problems/jump-game/)  ###
+#### [0055. Jump Game](https://leetcode.com/problems/jump-game/)  ####
 一个整形数组nums，长度为len，初始位于index=0的位置，可以移动[1, numS[index]]步，问nums[len - 1是否可达。
 
 一共用了3种方案，前两种超时（TLE）了，最后一个AC。
@@ -187,12 +185,12 @@ dp[i] = max(dp[i - 1] + nums[i], nums[i])
 
 [解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0055.%20Jump%20Game/Solution3.py)：DP。dp[i]代表从index=0处是否可达index=i处
 
-### [0056. Merge Intervals](https://leetcode.com/problems/merge-intervals/) ###
+#### [0056. Merge Intervals](https://leetcode.com/problems/merge-intervals/) ####
 合并整数区间
 
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0056.%20Merge%20Intervals/Solution.py): 先排序再遍历即可。
 
-### [0062. Unique Paths](https://leetcode.com/problems/unique-paths/) ###
+#### [0062. Unique Paths](https://leetcode.com/problems/unique-paths/) ####
 针对一个row * col的矩阵，初始位于左上角的格子，每次只能向右或者向下移动一格，问一共有多少种不同的路径能够到达右下角的格子  
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0062.%20Unique%20Paths/Solution_DP.py)： 动态规划  
 假设paths[i][j]表示从i行j列的格子到右下角格子的路径总数，那么根据只能向右或者向下移动的特点，先初始化最后一行所有元素和最后一列所有元素为1.
@@ -205,12 +203,12 @@ paths[i][j] = paths[i][j+1] + paths[i+1][j]  (0 <= i < row, 0 <= j < col)
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0062.%20Unique%20Paths/Solution_DFS.py)： DFS  
 虽然也是一个方法，但是会超时（TLE）  
 
-### [0064. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) ###
+#### [0064. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) ####
 给定row * col的矩阵，计算从(0,0)到(row, col)的最短路径。  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0064.%20Minimum%20Path%20Sum/Solution.py)：DP  
 这题是[0062. Unique Paths](https://leetcode.com/problems/unique-paths/)的变形，这里需要在遍历的过程中不断地更新最短路径即可。
 
-### [0070. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ###  
+#### [0070. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) ####  
 爬一个n级台阶，每次只能爬1级或者2级，问一共有多少种方式到达最高点。  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0070.%20Climbing%20Stairs/Solution.py)：DP  
 假设dp[i]表示从第i级台阶到达第n级的路径条数，因为每次只能移动1级或者2级，所以有如下子问题分解：
@@ -226,13 +224,26 @@ dp[1]就是要求的结果。
 
 优化：观察上面的代码，其实只需要使用两个临时变量保存当前值后面的2个值就可以省去数组的空间。
 
-### [0078. Subsets](https://leetcode.com/problems/subsets/)  ###
+#### [0075. Sort Colors](https://leetcode.com/problems/sort-colors/) ####
+对一个只包含0、1、2三种数值的列表排序。（不允许使用sort()等库函数)  
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0075.%20Sort%20Colors/Solution.py) 双指针法。left表示最后一个0要插入的位置，right表示第一个2要插入的位置，遍历一遍即可。  
+[解法二] count sort，需要遍历两遍（没有写代码）
+#### [0078. Subsets](https://leetcode.com/problems/subsets/)  ####
 给定一个list，求其中元素的全组合  
 
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0078.%20Subsets/Solution.py)：DFS  
 当前结果集中每个list，都添加当前遍历的item做为新的list，添加到结果集。另外当前遍历的item单独成为一个list添加到结果集。最后把空集合[]添加到结果集  
 
-### [0136. Single Number](https://leetcode.com/problems/single-number/)  ###
+#### [0094. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ####  
+二叉树的中序遍历  
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0094.%20Binary%20Tree%20Inorder%20Traversal/Solution_stack.py): 非递归  
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0094.%20Binary%20Tree%20Inorder%20Traversal/Solution_recursive.py):递归
+
+同类问题：  
+[二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)  
+[二叉树的后续遍历](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+
+#### [0136. Single Number](https://leetcode.com/problems/single-number/)  ####
 数组中元素除了一个元素，其他都是出现两次，找出那个只出现一次的元素  
 
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution.py)：对数组排序，遍历一遍即可  
@@ -242,3 +253,8 @@ dp[1]就是要求的结果。
 
  
 [解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution3.py)：所有元素做异或操作即可。 
+
+#### [0144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ####  
+
+
+#### [0145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ####  
