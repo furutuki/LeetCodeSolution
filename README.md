@@ -250,6 +250,10 @@ dp[1]就是要求的结果。
 [解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/solution_lifoqueue.py)：使用LifoQueue模拟栈，需要注意none不能作为元素添加，所以用字符串"null"代替。  
 [解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/solution_list_stack.py)：使用list来模拟栈，入栈出站分别使用append和pop。  
 
+#### [0102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)  ####  
+二叉树的层次遍历  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0102.%20Binary%20Tree%20Level%20Order%20Traversal/solution_deque_bfs.py)：使用collections.deque()做BFS遍历即可
+
 #### [0136. Single Number](https://leetcode.com/problems/single-number/)  ####
 数组中元素除了一个元素，其他都是出现两次，找出那个只出现一次的元素  
 
