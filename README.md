@@ -247,7 +247,8 @@ dp[1]就是要求的结果。
 #### [0101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) ####
 判断给定的二叉树是否是左右镜像对称的  
 [解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/Solution_recursive.py)：递归。  
-[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/solution_stack.py)：使用栈。  
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/solution_lifoqueue.py)：使用LifoQueue模拟栈，需要注意none不能作为元素添加，所以用字符串"null"代替。  
+[解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0101.%20Symmetric%20Tree/solution_list_stack.py)：使用list来模拟栈，入栈出站分别使用append和pop。  
 
 #### [0136. Single Number](https://leetcode.com/problems/single-number/)  ####
 数组中元素除了一个元素，其他都是出现两次，找出那个只出现一次的元素  

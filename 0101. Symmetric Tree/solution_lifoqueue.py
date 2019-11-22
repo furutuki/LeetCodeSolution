@@ -7,7 +7,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
 
@@ -16,7 +15,7 @@ class Solution:
                 stack.put("null")
             else:
                 stack.put(node)
-        
+
         def isNoneNode(node):
             return node == "null"
 
