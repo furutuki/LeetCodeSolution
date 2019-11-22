@@ -31,7 +31,6 @@ class Solution:
                 node_list.append(node)
                 level_list.append(node.val)
 
-            # ret.append(level_list)
             ret_q.appendleft(level_list)
 
             for item in node_list:
