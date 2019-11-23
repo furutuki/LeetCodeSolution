@@ -254,6 +254,25 @@ dp[1]就是要求的结果。
 二叉树的层次遍历  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0102.%20Binary%20Tree%20Level%20Order%20Traversal/solution_deque_bfs.py)：使用collections.deque()做BFS遍历即可
 
+#### [0103. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) ####
+计算二叉树的深度  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0104.%20Maximum%20Depth%20of%20Binary%20Tree/solution_bfs.py):直接bfs即可  
+
+
+#### [0107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) ####  
+二叉树的自底向上层次遍历，  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0107.%20Binary%20Tree%20Level%20Order%20Traversal%20II/solution_deque_bfs.py)： bfs  
+
+#### [0121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+一个整形数组代表每天的股票价格，计算一个最优买卖方案，返回能够获得的最大利润。  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock/solution.py):  
+记前i天股价最低的那天的下标为min_index，前i天能获得的最大利润为cur_max。那么前i+1天的最大利润和最小值的下标是：
+```python
+cur_max = cur_max = max(cur_max, prices[i] - prices[min_index])
+min_index = min_index if prices[min_index] <= prices[i] else i
+```
+遍历一遍即可得到结果。  
+
 #### [0136. Single Number](https://leetcode.com/problems/single-number/)  ####
 数组中元素除了一个元素，其他都是出现两次，找出那个只出现一次的元素  
 
@@ -264,6 +283,12 @@ dp[1]就是要求的结果。
 
  
 [解法三](https://github.com/furutuki/LeetCodeSolution/blob/master/0136.%20Single%20Number/Solution3.py)：所有元素做异或操作即可。 
+
+
+#### [0138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) ####
+链表每个节点有1个value，还有2个指针，next和random，要求深拷贝链表。  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0138.%20Copy%20List%20with%20Random%20Pointer/solution.py): 本题的关键是next和random指针的维护。可以用字典来映射老节点和新节点，通过遍历两次链表或者递归的方式来更新next和random2个指针。
+
 
 #### [0144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ####  
 
