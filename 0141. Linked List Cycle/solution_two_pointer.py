@@ -6,22 +6,30 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        p = head
-        q = head
-        while p and q:
-            if not q:
-                break
-            elif q.next == p:
+        walker = head
+        runner = head
+        while runner and runner.next and runner.next.next:
+            walker = walker.next
+            runner = runner.next.next
+            if walker == runner:
                 return True
-
-            q = q.next
-            if not q:
-                break
-            elif q.next == p:
-                return True
-            q = q.next
-            p = p.next
         return False
+        # p = head
+        # q = head
+        # while p and q:
+        #     if not q:
+        #         break
+        #     elif q.next == p:
+        #         return True
+        #
+        #     q = q.next
+        #     if not q:
+        #         break
+        #     elif q.next == p:
+        #         return True
+        #     q = q.next
+        #     p = p.next
+        # return False
 
 
 n1 = ListNode(3)
