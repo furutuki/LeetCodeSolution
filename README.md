@@ -287,8 +287,22 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 
 #### [0138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) ####
 链表每个节点有1个value，还有2个指针，next和random，要求深拷贝链表。  
-[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0138.%20Copy%20List%20with%20Random%20Pointer/solution.py): 本题的关键是next和random指针的维护。可以用字典来映射老节点和新节点，通过遍历两次链表或者递归的方式来更新next和random2个指针。
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0138.%20Copy%20List%20with%20Random%20Pointer/solution.py): 本题的关键是next和random指针的维护。可以用字典来映射老节点和新节点，通过遍历两次链表或者递归的方式来更新~~``~~next和random2个指针。
 
+
+#### [0141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) ####
+判断链表是否有环  
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0141.%20Linked%20List%20Cycle/solution_set.py): 遍历链表，将遍历过的节点放到set中，如果下一个节点在set中，说明有环  
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0141.%20Linked%20List%20Cycle/solution_two_pointer.py)：双指针法从头遍历，一个每次走一步，另外一个每次走两步，如果快的能追上慢的，说明有环  
+
+#### [0142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) ####
+判断链表是否有环，如果有返回环的起始节点，否则返回空  
+[解法一](https://github.com/furutuki/LeetCodeSolution/blob/master/0142.%20Linked%20List%20Cycle%20II/solution_set.py)：利用set记录遍历过的节点即可。  
+[解法二](https://github.com/furutuki/LeetCodeSolution/blob/master/0142.%20Linked%20List%20Cycle%20II/solution_walker_runner.py): 双指针法（快慢指针）。
+如下图所示，q为环的起始节点，p为快慢指针相遇节点，那么相遇时，快慢指针分别走过的距离为: a + 2b + c 和 a + b。因为快指针步速是慢指针2倍，所以 a + 2b + c = 2 * (a + b)
+。那么得到a = c。  
+因此在相遇点，再用另外一个慢指针从头结点开始遍历，直到和之前的慢指针相遇就是环的起始点。
+![avatar](https://farm6.staticflickr.com/5758/22715587283_bdb4ba8434.jpg)
 
 #### [0144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ####  
 
