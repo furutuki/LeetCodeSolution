@@ -308,3 +308,7 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 
 
 #### [0145. Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) ####  
+
+#### [0146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+实现一个LRU  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0146.%20LRU%20Cache/solution.py):字典+双向链表  
