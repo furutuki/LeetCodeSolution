@@ -314,5 +314,5 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0146.%20LRU%20Cache/solution.py):字典+双向链表  
 
 #### [0209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
-最小长度的子数组（和大于指定的值）问题
+最小长度的子数组（和大于指定的值）问题  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0209.%20Minimum%20Size%20Subarray%20Sum/Solution.py):滑动窗口问题  
