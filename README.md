@@ -316,3 +316,12 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 #### [0209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 最小长度的子数组（和大于指定的值）问题  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/0209.%20Minimum%20Size%20Subarray%20Sum/Solution.py):滑动窗口问题  
+
+
+#### [0215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/submissions/)
+数据中第K个最大元素  
+[解法1](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/Solution_sort.py):python库排序  
+[解法2](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/solution_quicksort.py):手写快排，第一个元素为支点  
+[解法3](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/Solution_mergesort.py):手写归并排序  
+[解法4](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/solution_quicksort2.py):手写快排2，支点做了随机处理  
+
