@@ -325,3 +325,7 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 [解法3](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/Solution_mergesort.py):手写归并排序  
 [解法4](https://github.com/furutuki/LeetCodeSolution/blob/master/0215.%20Kth%20Largest%20Element%20in%20an%20Array/solution_quicksort2.py):手写快排2，支点做了随机处理  
 
+
+#### [剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)  
+假设给定数组是后续遍历序列，对其排序得到中序遍历序列，根据中序和后序构造树，然后后续遍历树，判断得到的新的后序遍历序列和给定的是否相等  
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/%E5%89%91%E6%8C%87%20Offer%2035.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/solution.py)  
