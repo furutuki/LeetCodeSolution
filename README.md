@@ -329,3 +329,9 @@ min_index = min_index if prices[min_index] <= prices[i] else i
 #### [剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)  
 假设给定数组是后续遍历序列，对其排序得到中序遍历序列，根据中序和后序构造树，然后后续遍历树，判断得到的新的后序遍历序列和给定的是否相等  
 [解法](https://github.com/furutuki/LeetCodeSolution/blob/master/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/%E5%89%91%E6%8C%87%20Offer%2035.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/solution.py)  
+
+#### [剑指 Offer 59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)  
+求数组的指定长度的滑动窗口的最大值集合   
+[解法](https://github.com/furutuki/LeetCodeSolution/blob/master/%E5%89%91%E6%8C%87offer%E7%B3%BB%E5%88%97/%E5%89%91%E6%8C%87%20Offer%2059%20-%20I.%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/solution.py):   
+利用deque维护一个从左到右的单调队列，存放的是数组下标，最左边永远是最大值的下标。遍历数组，把队列右边所有小于等于当前元素的下标弹出，添加当前元素对应的下标到队列右边。如果最左边的下标已经不在滑动窗口范围内，弹出它。将队列最左边的下标对应的数添加到结果集。遍历结束，结果集就是答案。     
+ 
