@@ -4,12 +4,11 @@ from typing import List
 class Solution:
     def backtrace(self, nums: List[int], step: int, cur_res: List[int], res: List[List[int]]):
             if step == len(nums):
-                res.append(cur_res)
+                res.append(list(cur_res))
                 return
-            tmp_res = list(cur_res)
-            tmp_res.append(nums[step])
-            self.backtrace(nums, step + 1, tmp_res, res)
-
+            cur_res.append(nums[step])
+            self.backtrace(nums, step + 1, cur_res, res)
+            cur_res.pop()
             self.backtrace(nums, step + 1, list(cur_res), res)
 
     def subsets(self, nums: List[int]) -> List[List[int]]:
