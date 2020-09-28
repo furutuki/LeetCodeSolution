@@ -41,13 +41,3 @@ class Solution:
             if not len(q):
                 break
         return root
-
-
-n1 = Node(1)
-n2 = Node(2)
-n3 = Node(3)
-n1.left = n2
-n1.right = n3
-s = Solution()
-n = s.connect(n1)
-print(n)
