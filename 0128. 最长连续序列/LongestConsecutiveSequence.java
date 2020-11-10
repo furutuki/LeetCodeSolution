@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+// 排序数组再遍历一次
 public class LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
         int ans = 0;
